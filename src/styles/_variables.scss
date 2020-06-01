@@ -1,0 +1,29 @@
+
+// COLORS
+$light-shade: #F4F5EF;
+$light-accent: #82858A;
+$main-brand: #F2C54C;
+$dark-accent: rgb(141, 107, 83);
+$dark-shade: #253342;
+
+//Override bootstrap
+$primary: $main-brand;
+$info: $dark-shade;
+$success: #7eb64f;
+$warning: #fba617;
+$danger: #f44336;
+
+
+$black: #000;
+
+// Shadows
+$box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.2);
+$box-shadow-pizza: 0px 3px 13px rgba(0, 0, 0, 0.2);
+
+:export {
+    lightShade: $light-shade;
+    lightAccent: $light-accent;
+    mainBrand: $main-brand;
+    darkAccent: $dark-accent;
+    darkShade: $dark-shade;
+}
