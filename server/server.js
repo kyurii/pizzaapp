@@ -1,33 +1,13 @@
 import express from 'express';
-import path from 'path';
-import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
-import config from './config';
-import userRoute from './routes/userRoute';
-import productRoute from './routes/productRoute';
-import orderRoute from './routes/orderRoute';
-
-const mongodbUrl = config.MONGODB_URL;
-mongoose.connect(mongodbUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-}).catch((error) => console.log(error.reason));
-
+import data from './data';
 
 const app = express();
-app.use(bodyParser.json());
 
-app.use('/api/users', userRoute);
-app.use('/api/products', productRoute);
-app.use('/api/orders', orderRoute);
-app.get('/api/config/paypal', (req, res) => {
-  res.send(config.PAYPAL_CLIENT_ID);
-});
+app.get("/api/pizzas", (req, res) => {
+  res.send(data.pizzas)
+})
 
-app.use(express.static(path.join(__dirname, '/../frontend/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
-});
 
-app.listen(config.PORT, () => { console.log('Server started at http://localhost:5000'); });
+app.listen(1234, () => {
+  console.log("server started at 1234")
+})
