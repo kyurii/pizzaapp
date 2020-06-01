@@ -3,8 +3,6 @@ import { currencyActions } from '../../_actions';
 import { connect } from 'react-redux'
 
 export const CurrencyIndicator = ({ currency, showModal }) => {
-    console.log(showModal)
-
     return (
         <button type="button" className="btn btn-info ml-auto" onClick={() => showModal()}>
             Currency: {currency}
