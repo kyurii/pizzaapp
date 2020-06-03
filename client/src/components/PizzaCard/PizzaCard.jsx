@@ -1,5 +1,5 @@
 import React from 'react';
-import { addToCart } from '../../_actions';
+import { cartActions } from '../../_actions';
 import { connect } from 'react-redux';
 import { FaCartPlus } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ import './PizzaCard.scss'
 
 export const PizzaCard = ({ item, currency, addToCart }) => {
     const { calories, name, image, description, price } = item;
+    const currentPrice = price[currency];
 
     return (
         <div className="col-6 col-md-4 mb-5 d-flex justify-content-center">
@@ -18,7 +19,7 @@ export const PizzaCard = ({ item, currency, addToCart }) => {
                             <span role="img" aria-label="Calories">🔥</span>
                             <span>{ calories } Calories</span>
                         </div>
-                        <button className="btn add-to-cart rounded-circle" onClick={() => addToCart(item) }>
+                        <button className="btn add-to-cart rounded-circle" onClick={ () => addToCart(item, currentPrice) }>
                             <FaCartPlus color={variables.mainBrand}/>
                         </button>
                     </div>
@@ -27,7 +28,7 @@ export const PizzaCard = ({ item, currency, addToCart }) => {
                     </div>
                     <div className="pizza-name mt-3">{ name } </div>
                     <div className="pizza-description">Ingredients: { description } </div>
-                    <div className="pizza-price mt-1"> { `${price[currency]} ${currency}`} </div>
+                    <div className="pizza-price mt-1"> { `${currentPrice} ${currency}`} </div>
                 </div>
             </div>
         </div>
@@ -39,7 +40,7 @@ const mapStateToProps = ({currency}) => ({
 })
 
 const mapDispatchToProps = {
-    addToCart: addToCart
+    addToCart: cartActions.addToCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PizzaCard)
