@@ -1,4 +1,3 @@
-import config from 'config';
 import { handleResponse } from './_helpers'
 
 function getAllPizzas() {
@@ -6,9 +5,7 @@ function getAllPizzas() {
         method: 'GET',
     };
 
-    console.log(config.apiUrl)
-
-    return fetch(`${config.apiUrl}/pizzas`, requestOptions).then(handleResponse);
+    return fetch(`https://pizzaappjs.herokuapp.com/api/pizzas`, requestOptions).then(handleResponse);
 }
 
 export const pizzasService = {

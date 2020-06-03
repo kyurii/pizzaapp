@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import path from 'path';
 import cors from 'cors';
 
 import pizzasRoute from './routes/pizzasRoute';
@@ -21,9 +22,10 @@ app.use(cors());
 app.use("/api/pizzas", pizzasRoute);
 
 app.use(express.static(path.join(__dirname, '/../client/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/../client/build/index.html`));
-});
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/../client/build/index.html`));
+  });
 
 app.listen(config.PORT, () => {
   console.log("server started at " + config.PORT)

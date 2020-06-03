@@ -16,13 +16,11 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "copy-webpack-plugin": "^6.0.1",
-    "react-app-rewired": "^2.1.6"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "NODE_ENV=DEV react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
