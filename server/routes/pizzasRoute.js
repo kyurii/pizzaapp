@@ -12,7 +12,6 @@ router.get("/", async (req, res) => {
   const pizzas = await Pizza.find();
 
   if (pizzas.length) {
-    const pizzas = await Pizza.find();
     res.send(pizzas);
   } else {
     const dataPizzas = data.pizzas;

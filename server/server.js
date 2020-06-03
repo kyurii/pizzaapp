@@ -19,3 +19,6 @@ const app = express();
 app.use(cors());
 
 app.use("/api/pizzas", pizzasRoute);
+app.listen(config.PORT, () => {
+  console.log("server started at " + config.PORT)
+})

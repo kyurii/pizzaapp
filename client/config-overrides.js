@@ -7,7 +7,7 @@ module.exports = function override(config, env) {
 
     // global app config object
     config.externals.config = JSON.stringify({
-        apiUrl: process.env.NODE_ENV === 'production' ? 'https://pizzaappjs.herokuapp.com/api' : 'http://localhost:1234/api'
+        apiUrl: process.env.NODE_ENV === 'production' ? 'https://pizzaappjs.herokuapp.com/api' : 'http://localhost:5000/api'
     })
 
     return config;
