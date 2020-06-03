@@ -1,9 +1,9 @@
 export default {
   pizzas: [
     {
-      _id: '1',
       name: 'Margherita',
-      image: '/images/margherita.svg',
+      image: '/images/svg/margherita.svg',
+      calories: 300,
       description: 'Tomato sauce, mozzarella, and oregano',
       price: {
         EUR: 7,
@@ -11,9 +11,9 @@ export default {
       },
     },
     {
-      _id: '2',
       name: 'Marinara',
-      image: '/images/marinara.svg',
+      image: '/images/svg/marinara.svg',
+      calories: 353,
       description: 'Tomato sauce, garlic and basil',
       price: {
         'EUR': 7.5,
@@ -21,9 +21,9 @@ export default {
       },
     },
     {
-      _id: '3',
       name: 'Quattro Stagioni',
-      image: '/images/quattro_stagioni.svg',
+      image: '/images/svg/quattro_stagioni.svg',
+      calories: 398,
       description: 'Tomato sauce, mozzarella, mushrooms, ham, artichokes, olives, and oregano',
       price: {
         'EUR': 6,
@@ -31,9 +31,9 @@ export default {
       },
     },
     {
-      _id: '4',
       name: 'Carbonara',
-      image: '/images/carbonara.svg',
+      image: '/images/svg/carbonara.svg',
+      calories: 423,
       description: 'Tomato sauce, mozzarella, parmesan, eggs, and bacon',
       price: {
         'EUR': 5,
@@ -41,9 +41,9 @@ export default {
       },
     },
     {
-      _id: '5',
       name: 'Frutti di Mare',
-      image: '/images/frutti_mare.svg',
+      image: '/images/svg/frutti_mare.svg',
+      calories: 543,
       description: 'Tomato sauce and seafood',
       price: {
         'EUR': 5,
@@ -51,9 +51,9 @@ export default {
       },
     },
     {
-      _id: '6',
       name: 'Quattro Formaggi',
-      image: '/images/formaggi.svg',
+      image: '/images/svg/formaggi.svg',
+      calories: 509,
       description: 'Tomato sauce, mozzarella, parmesan, gorgonzola cheese, artichokes, and oregano',
       price: {
         'EUR': 5,
@@ -61,9 +61,9 @@ export default {
       },
     },
     {
-      _id: '7',
       name: 'Crudo',
-      image: '/images/crudo.svg',
+      image: '/images/svg/crudo.svg',
+      calories: 360,
       description: 'Tomato sauce, mozzarella and Parma ham',
       price: {
         'EUR': 6.4,
@@ -71,9 +71,9 @@ export default {
       },
     },
     {
-      _id: '8',
       name: 'Napoli',
-      image: '/images/napoli.svg',
+      image: '/images/svg/napoli.svg',
+      calories: 390,
       description: 'Tomato sauce, mozzarella, oregano, anchovies',
       price: {
         'EUR': 6.4,
@@ -81,9 +81,9 @@ export default {
       },
     },
     {
-      _id: '9',
       name: 'Pugliese',
-      image: '/images/pugliese.svg',
+      image: '/images/svg/pugliese.svg',
+      calories: 425,
       description: 'Tomato sauce, mozzarella, oregano, and onions',
       price: {
         'EUR': 8.3,

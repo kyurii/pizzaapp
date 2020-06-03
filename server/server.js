@@ -1,13 +1,21 @@
 import express from 'express';
-import data from './data';
+import mongoose from 'mongoose';
+import cors from 'cors';
+
+import pizzasRoute from './routes/pizzasRoute';
+import config from './config';
+
+const mongodbUrl = config.MONGODB_URL;
+mongoose.connect(mongodbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).catch(err => console.log(err))
+
+
+const db = mongoose.connection;
 
 const app = express();
 
-app.get("/api/pizzas", (req, res) => {
-  res.send(data.pizzas)
-})
+app.use(cors());
 
-
-app.listen(1234, () => {
-  console.log("server started at 1234")
-})
+app.use("/api/pizzas", pizzasRoute);
