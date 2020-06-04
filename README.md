@@ -4,8 +4,10 @@ Pizza app is a simple app for ordering food.
 
 ## Available Scripts
 To run the local project you need to install packages in the root directory and in the client .
+Also mongodb must be installed on your PC.
 
-After that, in the root directory and in the client directory, you should run:
+
+After that,run from the CMD -> mongod and mongo, in the root directory of the project and in the client directory, you should run:
 ### `npm start`
 
 ### Used modules
