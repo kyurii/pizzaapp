@@ -1,4 +1,5 @@
 Pizza app is a simple app for ordering food.
+###HOMEPAGE: https://pizzaappjs.herokuapp.com/
 
 
 ## Available Scripts
@@ -11,21 +12,17 @@ After that, in the root directory and in the client directory, you should run:
 
 ## CLIENT
 The app was blueprinted with react-create-app
-
 To extend webpack condig I used:
     copy-webpack-plugin
     react-app-rewired
-
 Styling packages:
     bootstrap
     react-icons
-
 For asynchronous state management:
     react-redux
     redux
     redux-logger
     redux-thunk
-
 Routing:
     react-router-dom
 
